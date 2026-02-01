@@ -1,4 +1,8 @@
 package DSA_CODING_2025_20LPA.ARRAY;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /* LC-1
   2 Sum
   arr={5,2,11,7,15}
@@ -48,4 +52,36 @@ package DSA_CODING_2025_20LPA.ARRAY;
     step 2: current element which is also our first value store into map
  */
 public class TWO_SUM {
+    public int[] twoSum(int[] nums, int target) {
+
+        // Create a HashMap to store numbers and their corresponding indices
+        Map<Integer, Integer> numToIndexMap = new HashMap<>();
+
+        // Get the size of the input array
+        int sizeOfArray = nums.length;
+
+        // Loop through the array
+        for(int i = 0; i < sizeOfArray; i++) {
+            // Calculate the difference between the target and the current number
+            int diff = target - nums[i];
+
+            // Check if the difference already exists in the map
+            if(numToIndexMap.containsKey(diff)) {
+                // If it exists, return the indices of the current number and the number that adds up to the target
+                return new int[]{i, numToIndexMap.get(diff)};
+            }
+
+            // If it doesn't exist, add the current number and its index to the map
+            numToIndexMap.put(nums[i], i);
+        }
+
+        // If no two numbers add up to the target, return null
+        return null;
+    }
+
+    static void main() {
+        TWO_SUM ts = new TWO_SUM();
+            int[] result = ts.twoSum(new int[]{9, 73, 7, 15}, 9);
+            System.out.println(result[0] + ", " + result[1]);
+        }
 }

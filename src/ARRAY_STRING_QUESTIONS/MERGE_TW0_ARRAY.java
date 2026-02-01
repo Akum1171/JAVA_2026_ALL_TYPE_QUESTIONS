@@ -38,13 +38,10 @@ public class MERGE_TW0_ARRAY {public static void main(String[] args)
 
     for(int i=0;i<clen;i++)
     {
-        if(i<alen)
-        {
+        if(i<alen) {
             c[i]=a[i];
-
         }
         else {
-
             c[i]=b[i-alen];
         }
         System.out.print(c[i]+" ");

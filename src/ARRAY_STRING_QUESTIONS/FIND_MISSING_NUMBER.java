@@ -3,9 +3,6 @@ package ARRAY_STRING_QUESTIONS;
 public class FIND_MISSING_NUMBER {
      static void main(String[] args) {
         // TODO Auto-generated method stub
-
-
-
         int arr[] = {1, 2, 3, 5, 6};
 
         int n = arr.length + 1; //range

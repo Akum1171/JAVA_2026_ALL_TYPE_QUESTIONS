@@ -10,7 +10,6 @@ public class Node
         this.val=val;
         next=null;
         prev=null;
-
     }
 
 }

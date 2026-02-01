@@ -36,6 +36,7 @@ public class FIND_THE_FIRST_NON_REPEATING_CHARACTER {
            countMap.put(c, countMap.getOrDefault(c,0)+1);
        }
 
+        System.out.println("----------------------------------------");
        for(Map.Entry<Character, Integer> entry : countMap.entrySet()){
            if(entry.getValue()==1){
                return entry.getKey();

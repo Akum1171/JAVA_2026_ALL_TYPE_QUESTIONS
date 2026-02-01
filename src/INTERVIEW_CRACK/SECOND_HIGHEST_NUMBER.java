@@ -32,7 +32,7 @@ public class SECOND_HIGHEST_NUMBER {
         return second;
     }
     public static Integer findSecondHighestJava8(int[] arr) {
-        if (arr == null || arr.length < 2) return null;
+    /*    if (arr == null || arr.length < 2) return null;
 
         List<Integer> list = Arrays.stream(arr)
                 .boxed() // convert int to Integer
@@ -40,6 +40,13 @@ public class SECOND_HIGHEST_NUMBER {
                 .sorted(Comparator.reverseOrder()) // sort descending
                 .collect(Collectors.toList());
 
-        return list.size() >= 2 ? list.get(1) : null;
+        return list.size() >= 2 ? list.get(1) : null;*/
+
+        List<Integer> list=Arrays.stream(arr)
+                .boxed()
+                .distinct()
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
+        return list.size() >=2 ? list.get(1) :null;
     }
 }

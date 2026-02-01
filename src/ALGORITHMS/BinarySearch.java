@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 public class BinarySearch {
     static void main() {
+
         int arr[]={1,2,3,4,5,23,13};
         Arrays.sort(arr);
 

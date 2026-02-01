@@ -24,8 +24,7 @@ public class FindDuplicateNumber {
 
         //approach2 using a set
         Set<Integer> seen=new HashSet<>();
-        nums.stream()
-                .filter(n->!seen.add(n))//only duplicate value
+        nums.stream().filter(n->!seen.add(n))//only duplicate value
                 .distinct()// bcs i want to distict out similar value
                 .forEach(System.out::println);
 

@@ -15,8 +15,7 @@ public class LinkdedList_IMPLMENT {
     {
         Node n=new Node(val);
 
-        if(head==null)
-        {
+        if(head==null) {
             head=n;
         }
         else {
@@ -24,6 +23,7 @@ public class LinkdedList_IMPLMENT {
             head=n;
         }
     }
+
     //addLast element
     public void addLast(int val)
     {
@@ -117,7 +117,7 @@ public class LinkdedList_IMPLMENT {
             }
         }
     }
-        public static void main(String[] args)
+         static void main(String[] args)
         {
             LinkdedList_IMPLMENT v1=new LinkdedList_IMPLMENT();
 
